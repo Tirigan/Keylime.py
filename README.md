@@ -1,3 +1,8 @@
+
+Disclaimer.
+For educational purposes only.
+
+
 # Keylime.py
 A project I made in school for learning a new programming language.
 
